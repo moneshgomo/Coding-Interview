@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class ProductOfTheNumber {
     public static void main(String[] args) {
         
-       
         Scanner scan = new Scanner(System.in);
         
         int userInput = scan.nextInt(); // 1234

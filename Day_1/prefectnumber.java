@@ -5,13 +5,15 @@ public class prefectnumber {
         int n = scan.nextInt();
 
         int sum = 0;
-        for(int i = 1 ; i < n ; i++){
+        for(int i = 1 ; i <= n/2 ; i++){
             if(n % i == 0){
                 sum += i;
             }
         }
 
-        System.out.println(n==sum ?"Yes" : "No");
+        System.out.println(n==sum ?"Yes": "No");
+
+        scan.close();
     }
     
 }

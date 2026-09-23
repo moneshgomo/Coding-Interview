@@ -1,29 +1,37 @@
-import java.util.Scanner;
-
 public class Conversions {
     public static void main(String[] args) {
-        
-        Scanner obj = new Scanner(System.in);
 
+        decimalToBinary(45);
 
-        // decimal to binary 
-        
-        int n = obj.nextInt();
+    }
 
-        int product = 1;
+    public static void decimalToBinary(int n) {
 
-        int result  = 0;
+        int CURRENT_CONVERSION = 10;
+        int CONVERTING_CONVERSION = 2;
+        int PRODUCT = 1;
+        int result = 0;
 
-
-        while(n > 0){
-            int remainder = n % 2 ;
-            
-            result = result + ( remainder * product);
-            product = product *  10;
-            n = n / 2;
+        while (n != 0) {
+            int remainder = n % CONVERTING_CONVERSION;
+            result += (PRODUCT * remainder);
+            PRODUCT *= CURRENT_CONVERSION;
+            n /= CONVERTING_CONVERSION;
         }
 
+        System.out.println(result);
 
-        System.out.println(result == 1111010);
+    }
+
+    public void binaryToDecimal(int a) {
+
+    }
+
+    public void decimalToOcta(int a) {
+
+    }
+
+    public void decimalToHexa(int a) {
+
     }
 }

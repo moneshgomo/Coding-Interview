@@ -17,14 +17,16 @@ public class PalindromeNumber {
             userInput = userInput/10;
         }
 
-        if( reversedValue == userValue){
+        System.out.println(reversedValue == userValue ? "Yes":"No");
 
-            System.out.println("Yes");
-        }
-        else{
-            System.out.println("No");
-        }
-        input.close();
+        // if( reversedValue == userValue){
+
+        //     System.out.println("Yes");
+        // }
+        // else{
+        //     System.out.println("No");
+        // }
+         input.close();
 
     }
 }

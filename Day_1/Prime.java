@@ -11,6 +11,8 @@ class Prime{
             }
         }
         System.out.println(count == 2 ? "YES" : "NO");
+
+        scan.close();
     }
 
   
