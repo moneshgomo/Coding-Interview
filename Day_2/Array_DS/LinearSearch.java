@@ -1,4 +1,4 @@
-package Day_2.Array_DS.;
+package Day_2.Array_DS;
 
 class LineaSearch {
     public static void main(String[] args) {
