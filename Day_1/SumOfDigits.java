@@ -7,7 +7,7 @@ public class SumOfDigits {
 
         int userInput = input.nextInt();
 
-
+       
         int sumOfDigits = 0;
 
 

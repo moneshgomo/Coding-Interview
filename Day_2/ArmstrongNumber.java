@@ -11,7 +11,7 @@ public class ArmstrongNumber {
 
         if (givenInput >= 0 && givenInput < 10) {
             System.err.println("Yes");
-            return;
+            return ;
         }
 
         int temp = givenInput;
