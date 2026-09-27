@@ -20,7 +20,7 @@ public class PrintingString {
     public static void reverseStringBuilder(String str) {
 
         StringBuilder sb = new StringBuilder(str);
-        System.out.println("Using StringBuilder " + sb.reverse()+ " ");
+        System.out.println("Using StringBuilder " + sb.reverse() + " ");
     }
 
     public static void reverseString(String userInput) {
