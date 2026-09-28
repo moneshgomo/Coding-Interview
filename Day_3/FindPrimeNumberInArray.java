@@ -1,11 +1,14 @@
 package Day_3;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class FindPrimeNumberInArray {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+
+       // LinkedList
 
         int n = input.nextInt();
 
