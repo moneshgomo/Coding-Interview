@@ -19,7 +19,7 @@ public class IjrshardNumber {
 
         float checker = originalValue % sum;
 
-        System.err.println(checker == 0 ? "Yes" : "No");
+        System.out.println(checker == 0 ? "Yes" : "No");
 
         input.close();
     }

@@ -22,7 +22,7 @@ public class DisariumNumber {
             sum = sum + (int) Math.pow(num, i + 1);
         }
 
-        System.err.println(sum == originalValue);
+        System.out.println(sum == originalValue);
 
         input.close();
 
