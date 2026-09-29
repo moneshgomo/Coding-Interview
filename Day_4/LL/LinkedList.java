@@ -39,21 +39,21 @@ class LinkedList {
   }
 
   void insertAtLast(int data) {
+    Node newNode = new Node(data);
+
     if (head == null) {
-      head = newNode;
-      return;
+        head = newNode;
+        return;
     }
 
-    Node newNode = new Node(data);
     Node currentNode = head;
 
     while (currentNode.next != null) {
-      currentNode = currentNode.next;
-
+        currentNode = currentNode.next;
     }
 
     currentNode.next = newNode;
-  }
+}
 
   void deleteAtFirst() {
 

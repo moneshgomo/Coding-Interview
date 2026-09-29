@@ -22,12 +22,20 @@ public class Main {
         list.insertAtFirst(40);
         list.insertAtFirst(50);
 
-        // list.deleteAtPosition(1);
-        //list.deleteAtPosition(3);
-       // list.deleteAtPosition(2);
-       //list.deleteAtPosition(5);
-       list.deleteAtPosition(4);
+        System.out.println();
+        list.insertAtLast(9);
+        list.insertAtLast(8);
+
+        System.out.println();
         list.display();
+
+        // list.deleteAtPosition(1);
+        // list.deleteAtPosition(3);
+        // list.deleteAtPosition(2);
+        // list.deleteAtPosition(5);
+
+        // list.deleteAtPosition(4);
+        // list.display();
 
         // list.display();
         // System.out.println();
@@ -56,8 +64,8 @@ public class Main {
         // list.insertAtPosition(7, 9);
         // list.display();
 
-        System.out.println();
-       System.out.println(list.getLength());
+        // System.out.println();
+        // System.out.println(list.getLength());
 
     }
 }
