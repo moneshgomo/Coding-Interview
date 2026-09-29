@@ -1,6 +1,5 @@
 package Day_3;
 
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class FindPrimeNumberInArray {
