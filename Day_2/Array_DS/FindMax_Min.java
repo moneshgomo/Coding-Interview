@@ -19,8 +19,8 @@ public class FindMax_Min {
         // int SECOND_MAX = findSecondMax(arr);
         //int MIN_RESULT = findMin(arr);
 
-        //System.err.println("Min " + MIN_RESULT);
-       // System.err.println("Max " + MAX_RESULT);
+        //System.out.println("Min " + MIN_RESULT);
+       // System.out.println("Max " + MAX_RESULT);
 
         input.close();
 

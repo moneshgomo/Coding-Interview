@@ -32,28 +32,28 @@ class LinkedList {
 
     Node newNode = new Node(data);
 
-    newNode.next = head;
+    newNode.next = head; 
 
     head = newNode;
 
   }
 
   void insertAtLast(int data) {
-    Node newNode = new Node(data);
+    Node newNode = new Node(data);//4
 
     if (head == null) {
-        head = newNode;
-        return;
+      head = newNode;
+      return;
     }
 
-    Node currentNode = head;
+    Node currentNode = head; // [7]
 
     while (currentNode.next != null) {
-        currentNode = currentNode.next;
+      currentNode = currentNode.next;
     }
 
     currentNode.next = newNode;
-}
+  }
 
   void deleteAtFirst() {
 
@@ -130,5 +130,39 @@ class LinkedList {
 
     }
     System.out.print("null");
+  }
+
+  boolean search(int target) {
+
+    Node currentNode = head;
+
+    while (currentNode != null) {
+
+      if (currentNode.data == target) {
+
+        return true;
+      }
+      currentNode = currentNode.next;
+    }
+
+    return false;
+  }
+
+  int findPosition(int target) {
+
+    int counter = 0;
+    Node currentNode = head;
+
+    while (currentNode != null) {
+      counter = counter + 1;
+      if (currentNode.data == target) {
+        return counter;
+
+      }
+      currentNode = currentNode.next;
+    }
+
+    return -1;
+
   }
 }
