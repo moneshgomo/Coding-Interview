@@ -1,16 +1,17 @@
+package Tuesday_29_09_26;
+
 class Solution {
-    public static void main(String args []){
+    public static void main(String[] args) {
 
-        // 233. Number of Digit One
-
-        System.out.println(countDigits(1248));
+         System.out.println(countDigits(1248));
     }
 
+
     public static int countDigits(int num) {
-        
+
         int count = 0;
         int numCopy = num;
-       
+
         while (numCopy != 0) {
             int digit = numCopy % 10;
             if (num % digit == 0) {
@@ -19,7 +20,7 @@ class Solution {
 
             numCopy /= 10;
         }
-        
+
         return count;
     }
 }

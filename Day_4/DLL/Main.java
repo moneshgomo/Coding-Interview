@@ -1,27 +1,23 @@
 public class Main {
     public static void main(String[] args) {
 
-        DoublyLinkedList list = new DoublyLinkedList();
+        DoublyLinkedList list1 = new DoublyLinkedList();
 
         char FORWARD = 'F';
-        char BACKWARD = 'B';
+        //char BACKWARD = 'B';
+
+        
+        list1.insertAtBegining(4);
+     
+        list1.insertAtBegining(2);
+        list1.insertAtBegining(1);
 
 
-        list.insertAtBegining(50);
-        list.insertAtBegining(40);
-        list.insertAtBegining(30);
-        list.insertAtBegining(20);
-        list.insertAtBegining(10);
-        System.out.println();
-        list.display(FORWARD);
+        list1.display(FORWARD);
 
-        list.insertAtPosition(25, 3);
-        System.out.println();
-        list.display(FORWARD);
+        list1.sortedInsert( 3);
 
-        int n = list.getLength();
-        System.out.println(n);
+        list1.display(FORWARD);
 
-        list.display(BACKWARD);
     }
 }

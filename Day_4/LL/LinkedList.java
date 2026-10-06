@@ -4,12 +4,31 @@ class LinkedList {
 
   Node head;
 
+  Node deleteDuplicateNode() {
+    Node currentNode = head;
+
+    while (currentNode != null && currentNode.next != null) {
+      if (currentNode.data == currentNode.next.data) {
+
+        currentNode.next = currentNode.next.next;
+
+      } else {
+
+        currentNode = currentNode.next;
+      }
+    }
+
+    return head;
+
+  }
+
   void insertAtPosition(int data, int position) {
 
     if (position < 1 || position > getLength() + 1) {
       System.out.println("Invalid position");
       return;
     }
+
     Node newNode = new Node(data);
     Node currentNode = head;
 
@@ -32,14 +51,14 @@ class LinkedList {
 
     Node newNode = new Node(data);
 
-    newNode.next = head; 
+    newNode.next = head;
 
     head = newNode;
 
   }
 
   void insertAtLast(int data) {
-    Node newNode = new Node(data);//4
+    Node newNode = new Node(data);// 4
 
     if (head == null) {
       head = newNode;
@@ -125,11 +144,11 @@ class LinkedList {
     Node currentNode = head;
 
     while (currentNode != null) {
-      System.out.print(currentNode.data + " -> ");
+      System.out.print(currentNode.data + "  ");
       currentNode = currentNode.next;
 
     }
-    System.out.print("null");
+
   }
 
   boolean search(int target) {

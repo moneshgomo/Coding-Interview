@@ -3,6 +3,60 @@ public class DoublyLinkedList {
     Node head;
     Node tail;
 
+
+
+    /*
+Source : https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem?isFullScreen=true
+
+       public static DoublyLinkedListNode sortedInsert(DoublyLinkedListNode llist, int data) {
+
+    DoublyLinkedListNode newNode = new DoublyLinkedListNode(data);
+    DoublyLinkedListNode currentNode = llist;
+
+    if (llist == null || data < llist.data) {
+        newNode.next = llist;
+
+        if (llist != null) {
+            llist.prev = newNode;
+        }
+
+        return newNode;
+    }
+
+    while (currentNode != null && currentNode.next != null) {
+
+        if (currentNode.data <= data && currentNode.next.data >= data) {
+
+            currentNode.next.prev = newNode;
+            newNode.next = currentNode.next;
+            newNode.prev = currentNode;
+            currentNode.next = newNode;
+
+            return llist;
+        } 
+        else {
+            currentNode = currentNode.next;
+        }
+    }
+
+    newNode.prev = currentNode;
+    currentNode.next = newNode;
+
+    return llist;
+}
+    
+    */
+
+
+
+
+
+
+
+
+
+
+
     void insertAtBegining(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -31,6 +85,7 @@ public class DoublyLinkedList {
         tail = newNode;
     }
 
+
     void insertAtPosition(int data, int position) {
         Node newNode = new Node(data);
         Node currentNode = head;
@@ -52,11 +107,18 @@ public class DoublyLinkedList {
             for (int i = 1; i < position - 1; i++) {
                 currentNode = currentNode.next;
             }
+
+            if (currentNode == tail) {
+                tail.next = newNode;
+                newNode.previous = tail;
+                tail = newNode;
+                return;
+            }
             newNode.next = currentNode.next;
             newNode.previous = currentNode;
             currentNode.next.previous = newNode;
             currentNode.next = newNode;
-            
+
         }
 
     }
@@ -94,6 +156,48 @@ public class DoublyLinkedList {
 
     }
 
+    void deleteAtPosition(int position) {
+
+        if (getLength() == 0 || getLength() - 1 < position || position <= 0) {
+            System.out.println("Invalid Position or List is empty");
+            return;
+        }
+
+        if (position == getLength() - 1) {
+            deleteAtLast();
+            return;
+        }
+
+        Node currentNode = head;
+
+        if (position == 0) {
+
+            currentNode.next.previous = null;
+            head = currentNode.next;
+
+            return;
+        }
+
+
+        if (head == tail) {
+            head = tail = null;
+            return;
+        }
+
+        for (int i = 0; i < position; i++) {
+            currentNode = currentNode.next;
+        }
+
+        if(currentNode == tail){
+            tail = tail.previous;
+            tail.next =  null;
+            return  ;
+        }
+
+        currentNode.previous.next = currentNode.next;
+        currentNode.next.previous = currentNode.previous;
+    }
+
     void display(char direction) {
 
         char FORWARD = 'F';
@@ -114,7 +218,9 @@ public class DoublyLinkedList {
             }
             System.out.println("null");
             return;
-        } else if (direction == BACKWARD) {
+        }
+
+        else if (direction == BACKWARD) {
             Node currentNode = tail;
 
             while (currentNode != null) {
